@@ -1,0 +1,73 @@
+<ion-content [fullscreen]="true">
+	<div class="container">
+		<!-- <img *ngIf="places.length < 1" src="../../assets/images/food.jpg"> -->
+
+		<ion-card *ngFor="let place of places">
+			<ion-grid>
+				<ion-row>
+					<ion-col size="3">
+						<div class="square-image" style="background-color: #333;">
+							<img class="icon-img" [src]="place.categories[0].icon.prefix + '32' + place.categories[0].icon.suffix"
+								alt="{{ place.categories[0].name }}" />
+						</div>
+					</ion-col>
+					<ion-col size="6">
+						<ion-card-header>
+							<div class="big-font">{{place.name}}</div>
+						</ion-card-header>
+						<ion-card-content>
+							<p>{{place.location.formatted_address}}</p>
+							<p>{{place.categories[0].name}}</p>
+						</ion-card-content>
+					</ion-col>
+					<ion-col size="3" class="ion-text-right">
+						<ion-button color="danger">
+							<ion-icon name="heart" *ngIf="true; else notFavoritedIcon"></ion-icon>
+							<ng-template #notFavoritedIcon>
+								<ion-icon name="heart-outline"></ion-icon>
+							</ng-template>
+						</ion-button>
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+		</ion-card>
+	</div>
+</ion-content>
+
+<ion-header>
+	<ion-toolbar>
+		<div class="container">
+			<ion-grid>
+				<ion-row>
+					<ion-col size="12" class="input-col">
+						<h3 style="color: #333;">Don't know what to eat? Let me help!</h3>
+						<ion-item lines="none">
+							<ion-label position="floating" class="custom-floated-label">Location</ion-label>
+							<ion-input style="margin-left: 0.75rem;" placeholder="Oxford, MS" [(ngModel)]="addressInputValue"></ion-input>
+						</ion-item>
+					</ion-col>
+				</ion-row>
+				<ion-row>
+					<ion-col>
+						<ion-button expand="block" fill="outline" color="primary" (click)="search()"
+							[disabled]="!addressInputValue">
+							<ion-icon slot="start" name="search"></ion-icon>
+							Search
+						</ion-button>
+					</ion-col>
+					<ion-col>
+						<ion-button expand="block" fill="outline" color="medium" (click)="locateMe()">
+							<ion-icon slot="icon-only" name="location-outline"></ion-icon>
+						</ion-button>
+					</ion-col>
+					<ion-col>
+						<ion-button expand="block" fill="outline" color="medium" [routerLink]="'/tabs/filter'">
+							<ion-icon slot="icon-only" name="filter-outline"></ion-icon>
+						</ion-button>
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+		</div>
+
+	</ion-toolbar>
+</ion-header>

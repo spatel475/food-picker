@@ -1,0 +1,751 @@
+{
+  "results": [
+    {
+      "fsq_id": "5b93f4e697cf5a002cffe128",
+      "categories": [
+        {
+          "id": 17069,
+          "name": "Grocery Store",
+          "short_name": "Grocery Store",
+          "plural_name": "Grocery Stores",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/food_grocery_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [
+        {
+          "id": "6adf56af-558f-4fc8-8bb0-bfb35dd622bc",
+          "name": "Trader Joe's"
+        }
+      ],
+      "distance": 4338,
+      "geocodes": {
+        "main": {
+          "latitude": 35.090984,
+          "longitude": -89.80114
+        },
+        "roof": {
+          "latitude": 35.090984,
+          "longitude": -89.80114
+        }
+      },
+      "link": "/v3/places/5b93f4e697cf5a002cffe128",
+      "location": {
+        "address": "2130 Exeter Rd",
+        "address_extended": "Ste 101",
+        "census_block": "471570213513009",
+        "country": "US",
+        "cross_street": "",
+        "dma": "Memphis",
+        "formatted_address": "2130 Exeter Rd, Germantown, TN 38138",
+        "locality": "Germantown",
+        "postcode": "38138",
+        "region": "TN"
+      },
+      "name": "Trader Joe's",
+      "related_places": {},
+      "timezone": "America/Chicago"
+    },
+    {
+      "fsq_id": "4b9e5ba5f964a520a1dc36e3",
+      "categories": [
+        {
+          "id": 17090,
+          "name": "Hardware Store",
+          "short_name": "Hardware",
+          "plural_name": "Hardware Stores",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/hardware_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 4570,
+      "geocodes": {
+        "main": {
+          "latitude": 35.092286,
+          "longitude": -89.810186
+        },
+        "roof": {
+          "latitude": 35.092286,
+          "longitude": -89.810186
+        }
+      },
+      "link": "/v3/places/4b9e5ba5f964a520a1dc36e3",
+      "location": {
+        "address": "2083 S Germantown Rd",
+        "census_block": "471570214301005",
+        "country": "US",
+        "cross_street": "Poplar",
+        "dma": "Memphis",
+        "formatted_address": "2083 S Germantown Rd (Poplar), Germantown, TN 38138",
+        "locality": "Germantown",
+        "postcode": "38138",
+        "region": "TN"
+      },
+      "name": "Germantown Hardware",
+      "related_places": {},
+      "timezone": "America/Chicago"
+    },
+    {
+      "fsq_id": "4b926e6ef964a52014f933e3",
+      "categories": [
+        {
+          "id": 13068,
+          "name": "American Restaurant",
+          "short_name": "American",
+          "plural_name": "American Restaurants",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13145,
+          "name": "Fast Food Restaurant",
+          "short_name": "Fast Food",
+          "plural_name": "Fast Food Restaurants",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/fastfood_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [
+        {
+          "id": "16d16020-992b-0132-fd75-7a163eb2a6fc",
+          "name": "Chick-Fil-A"
+        }
+      ],
+      "distance": 7038,
+      "geocodes": {
+        "main": {
+          "latitude": 35.115443,
+          "longitude": -89.800894
+        },
+        "roof": {
+          "latitude": 35.115443,
+          "longitude": -89.800894
+        }
+      },
+      "link": "/v3/places/4b926e6ef964a52014f933e3",
+      "location": {
+        "address": "1230 S Germantown Rd",
+        "census_block": "471570213511000",
+        "country": "US",
+        "cross_street": "Wolf Trail Cv",
+        "dma": "Memphis",
+        "formatted_address": "1230 S Germantown Rd (Wolf Trail Cv), Germantown, TN 38138",
+        "locality": "Germantown",
+        "postcode": "38138",
+        "region": "TN"
+      },
+      "name": "Chick-Fil-A",
+      "related_places": {},
+      "timezone": "America/Chicago"
+    },
+    {
+      "fsq_id": "4d447ff91911a0936cd9d8d8",
+      "categories": [
+        {
+          "id": 16019,
+          "name": "Hiking Trail",
+          "short_name": "Trail",
+          "plural_name": "Hiking Trails",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/parks_outdoors/hikingtrail_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 9334,
+      "geocodes": {
+        "main": {
+          "latitude": 35.118543,
+          "longitude": -89.829134
+        }
+      },
+      "link": "/v3/places/4d447ff91911a0936cd9d8d8",
+      "location": {
+        "address": "River Commons Cir N",
+        "census_block": "471570214102000",
+        "country": "US",
+        "cross_street": "at Humphreys",
+        "dma": "Memphis",
+        "formatted_address": "River Commons Cir N (at Humphreys), Memphis, TN 38120",
+        "locality": "Memphis",
+        "postcode": "38120",
+        "region": "TN"
+      },
+      "name": "Wolf River Greenway Bottomland Glen",
+      "related_places": {},
+      "timezone": "America/Chicago"
+    },
+    {
+      "fsq_id": "4b142548f964a520f69d23e3",
+      "categories": [
+        {
+          "id": 13068,
+          "name": "American Restaurant",
+          "short_name": "American",
+          "plural_name": "American Restaurants",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13145,
+          "name": "Fast Food Restaurant",
+          "short_name": "Fast Food",
+          "plural_name": "Fast Food Restaurants",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/fastfood_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [
+        {
+          "id": "16d16020-992b-0132-fd75-7a163eb2a6fc",
+          "name": "Chick-Fil-A"
+        }
+      ],
+      "distance": 9449,
+      "geocodes": {
+        "main": {
+          "latitude": 35.046853,
+          "longitude": -89.696992
+        },
+        "roof": {
+          "latitude": 35.046853,
+          "longitude": -89.696992
+        }
+      },
+      "link": "/v3/places/4b142548f964a520f69d23e3",
+      "location": {
+        "address": "1036 W Poplar Ave",
+        "census_block": "471570215301009",
+        "country": "US",
+        "cross_street": "",
+        "dma": "Memphis",
+        "formatted_address": "1036 W Poplar Ave, Collierville, TN 38017",
+        "locality": "Collierville",
+        "postcode": "38017",
+        "region": "TN"
+      },
+      "name": "Chick-Fil-A",
+      "related_places": {},
+      "timezone": "America/Chicago"
+    },
+    {
+      "fsq_id": "4b058661f964a520755f22e3",
+      "categories": [
+        {
+          "id": 16037,
+          "name": "Playground",
+          "short_name": "Playground",
+          "plural_name": "Playgrounds",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/parks_outdoors/playground_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 10036,
+      "geocodes": {
+        "main": {
+          "latitude": 35.1528,
+          "longitude": -89.846757
+        },
+        "roof": {
+          "latitude": 35.1528,
+          "longitude": -89.846757
+        }
+      },
+      "link": "/v3/places/4b058661f964a520755f22e3",
+      "location": {
+        "address": "6489 Mullins Station Rd",
+        "census_block": "471579804021006",
+        "country": "US",
+        "cross_street": "at Walnut Grove Rd",
+        "dma": "Memphis",
+        "formatted_address": "6489 Mullins Station Rd (at Walnut Grove Rd), Memphis, TN 38134",
+        "locality": "Memphis",
+        "postcode": "38134",
+        "region": "TN"
+      },
+      "name": "Shelby Farms Park",
+      "related_places": {
+        "children": [
+          {
+            "fsq_id": "4c97e2e3f757a1cdf4d89b7b",
+            "categories": [
+              {
+                "id": 16037,
+                "name": "Playground",
+                "short_name": "Playground",
+                "plural_name": "Playgrounds",
+                "icon": {
+                  "prefix": "https://ss3.4sqi.net/img/categories_v2/parks_outdoors/playground_",
+                  "suffix": ".png"
+                }
+              }
+            ],
+            "name": "Woodland Discovery Playground"
+          },
+          {
+            "fsq_id": "5b426dde67f62b002c406964",
+            "categories": [
+              {
+                "id": 16023,
+                "name": "Lake",
+                "short_name": "Lake",
+                "plural_name": "Lakes",
+                "icon": {
+                  "prefix": "https://ss3.4sqi.net/img/categories_v2/parks_outdoors/lake_",
+                  "suffix": ".png"
+                }
+              }
+            ],
+            "name": "Mayor Lake"
+          },
+          {
+            "fsq_id": "50281852e4b0f080a62c0c1d",
+            "categories": [
+              {
+                "id": 16023,
+                "name": "Lake",
+                "short_name": "Lake",
+                "plural_name": "Lakes",
+                "icon": {
+                  "prefix": "https://ss3.4sqi.net/img/categories_v2/parks_outdoors/lake_",
+                  "suffix": ".png"
+                }
+              }
+            ],
+            "name": "Beaver Lake"
+          },
+          {
+            "fsq_id": "5b4780d288a48b00244e0eee",
+            "categories": [
+              {
+                "id": 16023,
+                "name": "Lake",
+                "short_name": "Lake",
+                "plural_name": "Lakes",
+                "icon": {
+                  "prefix": "https://ss3.4sqi.net/img/categories_v2/parks_outdoors/lake_",
+                  "suffix": ".png"
+                }
+              }
+            ],
+            "name": "Pine Lake"
+          },
+          {
+            "fsq_id": "4ba54fe4f964a5205ef938e3",
+            "categories": [
+              {
+                "id": 16048,
+                "name": "Stable",
+                "short_name": "Stable",
+                "plural_name": "Stables",
+                "icon": {
+                  "prefix": "https://ss3.4sqi.net/img/categories_v2/parks_outdoors/stable_",
+                  "suffix": ".png"
+                }
+              }
+            ],
+            "name": "Shelby Farms Stables"
+          },
+          {
+            "fsq_id": "5957ee55840fc216ec82bb6b",
+            "categories": [
+              {
+                "id": 16023,
+                "name": "Lake",
+                "short_name": "Lake",
+                "plural_name": "Lakes",
+                "icon": {
+                  "prefix": "https://ss3.4sqi.net/img/categories_v2/parks_outdoors/lake_",
+                  "suffix": ".png"
+                }
+              }
+            ],
+            "name": "Hyde Lake"
+          },
+          {
+            "fsq_id": "5acf9fd6f1936e63e77a65f5",
+            "categories": [
+              {
+                "id": 16019,
+                "name": "Hiking Trail",
+                "short_name": "Trail",
+                "plural_name": "Hiking Trails",
+                "icon": {
+                  "prefix": "https://ss3.4sqi.net/img/categories_v2/parks_outdoors/hikingtrail_",
+                  "suffix": ".png"
+                }
+              },
+              {
+                "id": 17117,
+                "name": "Sporting Goods Retail",
+                "short_name": "Sporting Goods Retail",
+                "plural_name": "Sporting Goods Retail",
+                "icon": {
+                  "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/sports_outdoors_",
+                  "suffix": ".png"
+                }
+              }
+            ],
+            "name": "Chickasaw Trail"
+          },
+          {
+            "fsq_id": "524a02a211d2ba8a2e1dad2d",
+            "categories": [
+              {
+                "id": 16032,
+                "name": "Park",
+                "short_name": "Park",
+                "plural_name": "Parks",
+                "icon": {
+                  "prefix": "https://ss3.4sqi.net/img/categories_v2/parks_outdoors/park_",
+                  "suffix": ".png"
+                }
+              }
+            ],
+            "name": "Shelby Farms Visitors Center"
+          },
+          {
+            "fsq_id": "4c0bec367e3fc9289003f682",
+            "categories": [
+              {
+                "id": 16030,
+                "name": "Other Great Outdoors",
+                "short_name": "Other Outdoors",
+                "plural_name": "Other Great Outdoors",
+                "icon": {
+                  "prefix": "https://ss3.4sqi.net/img/categories_v2/parks_outdoors/outdoors_",
+                  "suffix": ".png"
+                }
+              },
+              {
+                "id": 17117,
+                "name": "Sporting Goods Retail",
+                "short_name": "Sporting Goods Retail",
+                "plural_name": "Sporting Goods Retail",
+                "icon": {
+                  "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/sports_outdoors_",
+                  "suffix": ".png"
+                }
+              }
+            ],
+            "name": "Shelby Farms Bison Range"
+          },
+          {
+            "fsq_id": "4ba26a40f964a520b6f637e3",
+            "categories": [
+              {
+                "id": 10014,
+                "name": "Disc Golf Course",
+                "short_name": "Disc Golf Course",
+                "plural_name": "Disc Golf Courses",
+                "icon": {
+                  "prefix": "https://ss3.4sqi.net/img/categories_v2/parks_outdoors/golfcourse_",
+                  "suffix": ".png"
+                }
+              }
+            ],
+            "name": "Shelby Farms Disc Golf Course"
+          },
+          {
+            "fsq_id": "50a01115e4b01718b38fb05d",
+            "categories": [
+              {
+                "id": 16032,
+                "name": "Park",
+                "short_name": "Park",
+                "plural_name": "Parks",
+                "icon": {
+                  "prefix": "https://ss3.4sqi.net/img/categories_v2/parks_outdoors/park_",
+                  "suffix": ".png"
+                }
+              }
+            ],
+            "name": "Shelby Farms Kite Flying Area"
+          },
+          {
+            "fsq_id": "5b426c897564f7002c0c8dea",
+            "categories": [
+              {
+                "id": 16023,
+                "name": "Lake",
+                "short_name": "Lake",
+                "plural_name": "Lakes",
+                "icon": {
+                  "prefix": "https://ss3.4sqi.net/img/categories_v2/parks_outdoors/lake_",
+                  "suffix": ".png"
+                }
+              }
+            ],
+            "name": "Chickasaw Lake"
+          },
+          {
+            "fsq_id": "5b75aceeacb00b002ce77945",
+            "categories": [
+              {
+                "id": 16019,
+                "name": "Hiking Trail",
+                "short_name": "Trail",
+                "plural_name": "Hiking Trails",
+                "icon": {
+                  "prefix": "https://ss3.4sqi.net/img/categories_v2/parks_outdoors/hikingtrail_",
+                  "suffix": ".png"
+                }
+              }
+            ],
+            "name": "Chickasaw Trail"
+          },
+          {
+            "fsq_id": "533c2cf8498e0206f7a84c9f",
+            "categories": [
+              {
+                "id": 16017,
+                "name": "Garden",
+                "short_name": "Garden",
+                "plural_name": "Gardens",
+                "icon": {
+                  "prefix": "https://ss3.4sqi.net/img/categories_v2/parks_outdoors/garden_",
+                  "suffix": ".png"
+                }
+              }
+            ],
+            "name": "Shelby Farms Park Greenline Gardens"
+          },
+          {
+            "fsq_id": "4b4baa54f964a52053a326e3",
+            "categories": [
+              {
+                "id": 16033,
+                "name": "Dog Park",
+                "short_name": "Dog Park",
+                "plural_name": "Dog Parks",
+                "icon": {
+                  "prefix": "https://ss3.4sqi.net/img/categories_v2/parks_outdoors/dogrun_",
+                  "suffix": ".png"
+                }
+              }
+            ],
+            "name": "Shelby Farms Dog Park"
+          },
+          {
+            "fsq_id": "4ba3fd06f964a520c77438e3",
+            "categories": [
+              {
+                "id": 16000,
+                "name": "Landmarks and Outdoors",
+                "short_name": "Landmarks and Outdoors",
+                "plural_name": "Landmarks and Outdoors",
+                "icon": {
+                  "prefix": "https://ss3.4sqi.net/img/categories_v2/parks_outdoors/default_",
+                  "suffix": ".png"
+                }
+              }
+            ],
+            "name": "Shelby Farms Bike Trail"
+          }
+        ]
+      },
+      "timezone": "America/Chicago"
+    },
+    {
+      "fsq_id": "4b0864f3f964a520d70a23e3",
+      "categories": [
+        {
+          "id": 17069,
+          "name": "Grocery Store",
+          "short_name": "Grocery Store",
+          "plural_name": "Grocery Stores",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/food_grocery_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [
+        {
+          "id": "fa9e3e0b-5129-4945-9a0a-468e96e7fd24",
+          "name": "The Fresh Market"
+        }
+      ],
+      "distance": 10245,
+      "geocodes": {
+        "main": {
+          "latitude": 35.108573,
+          "longitude": -89.890076
+        },
+        "roof": {
+          "latitude": 35.108573,
+          "longitude": -89.890076
+        }
+      },
+      "link": "/v3/places/4b0864f3f964a520d70a23e3",
+      "location": {
+        "address": "835 S White Station Rd",
+        "census_block": "471570095011002",
+        "country": "US",
+        "cross_street": "at Park Ave",
+        "dma": "Memphis",
+        "formatted_address": "835 S White Station Rd (at Park Ave), Memphis, TN 38117",
+        "locality": "Memphis",
+        "postcode": "38117",
+        "region": "TN"
+      },
+      "name": "The Fresh Market",
+      "related_places": {},
+      "timezone": "America/Chicago"
+    },
+    {
+      "fsq_id": "4b21abf8f964a520de3f24e3",
+      "categories": [
+        {
+          "id": 13064,
+          "name": "Pizzeria",
+          "short_name": "Pizza",
+          "plural_name": "Pizzerias",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/pizza_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 10351,
+      "geocodes": {
+        "main": {
+          "latitude": 35.106179,
+          "longitude": -89.893206
+        },
+        "roof": {
+          "latitude": 35.106179,
+          "longitude": -89.893206
+        }
+      },
+      "link": "/v3/places/4b21abf8f964a520de3f24e3",
+      "location": {
+        "address": "5061 Park Ave",
+        "census_block": "471570095011004",
+        "country": "US",
+        "dma": "Memphis",
+        "formatted_address": "5061 Park Ave, Memphis, TN 38117",
+        "locality": "Memphis",
+        "postcode": "38117",
+        "region": "TN"
+      },
+      "name": "Memphis Pizza Cafe",
+      "related_places": {},
+      "timezone": "America/Chicago"
+    },
+    {
+      "fsq_id": "4b464ca9f964a520ee1c26e3",
+      "categories": [
+        {
+          "id": 13303,
+          "name": "Mexican Restaurant",
+          "short_name": "Mexican",
+          "plural_name": "Mexican Restaurants",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/mexican_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 9993,
+      "geocodes": {
+        "main": {
+          "latitude": 35.046534,
+          "longitude": -89.687102
+        },
+        "roof": {
+          "latitude": 35.046534,
+          "longitude": -89.687102
+        }
+      },
+      "link": "/v3/places/4b464ca9f964a520ee1c26e3",
+      "location": {
+        "address": "746 W Poplar Ave",
+        "address_extended": "Ste 101",
+        "census_block": "471570216114007",
+        "country": "US",
+        "dma": "Memphis",
+        "formatted_address": "746 W Poplar Ave, Collierville, TN 38017",
+        "locality": "Collierville",
+        "postcode": "38017",
+        "region": "TN"
+      },
+      "name": "La Hacienda Mexican Restaurant",
+      "related_places": {},
+      "timezone": "America/Chicago"
+    },
+    {
+      "fsq_id": "4b2fc053f964a52018ef24e3",
+      "categories": [
+        {
+          "id": 13276,
+          "name": "Sushi Restaurant",
+          "short_name": "Sushi",
+          "plural_name": "Sushi Restaurants",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/sushi_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 9877,
+      "geocodes": {
+        "main": {
+          "latitude": 35.045411,
+          "longitude": -89.692144
+        },
+        "roof": {
+          "latitude": 35.045411,
+          "longitude": -89.692144
+        }
+      },
+      "link": "/v3/places/4b2fc053f964a52018ef24e3",
+      "location": {
+        "address": "875 W Poplar Ave",
+        "address_extended": "Ste 19",
+        "census_block": "471570215443000",
+        "country": "US",
+        "cross_street": "btwn New Byhalia Rd. & Market Blvd.",
+        "dma": "Memphis",
+        "formatted_address": "875 W Poplar Ave (btwn New Byhalia Rd. & Market Blvd.), Collierville, TN 38017",
+        "locality": "Collierville",
+        "postcode": "38017",
+        "region": "TN"
+      },
+      "name": "Fuji Cafe",
+      "related_places": {},
+      "timezone": "America/Chicago"
+    }
+  ],
+  "context": {
+    "geo_bounds": {
+      "circle": {
+        "center": {
+          "latitude": 35.0519296,
+          "longitude": -89.800704
+        },
+        "radius": 22000
+      }
+    }
+  }
+}

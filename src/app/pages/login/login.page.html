@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+	<!-- <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar> -->
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+	<div class="glassmorphic-container">
+		<div class="login-card">
+			<h2>Food Picker</h2>
+			<form>
+				<ion-item>
+					<ion-label position="floating">Email</ion-label>
+					<ion-input type="email"></ion-input>
+				</ion-item>
+				<ion-item>
+					<ion-label position="floating">Password</ion-label>
+					<ion-input type="password"></ion-input>
+				</ion-item>
+				<ion-button expand="block" class="ion-margin-top" [routerLink]="'/tabs/home'">
+					Login
+				</ion-button>
+			</form>
+
+			<div style="padding-top: 1rem;">
+				<a style="color: black;" [routerLink]="'/signup'">
+					Dont have an account?
+					<u>Sign up</u>
+				</a>
+			</div>
+		</div>
+	</div>
+</ion-content>
