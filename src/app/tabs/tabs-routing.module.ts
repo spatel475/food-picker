@@ -40,6 +40,10 @@ const routes: Routes = [{
 	loadChildren: () => import('../pages/signup/signup.module').then(m => m.SignupPageModule)
 },
 {
+	path: 'forgot-password',
+	loadChildren: () => import('../pages/forgot-password/forgot-password.module').then(m => m.ForgotPasswordPageModule)
+},
+{
 	path: '',
 	redirectTo: '/login',
 	pathMatch: 'full'

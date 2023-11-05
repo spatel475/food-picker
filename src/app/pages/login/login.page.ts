@@ -45,6 +45,10 @@ export class LoginPage {
 	gotoSignup() {
 		this.navCntrl.navigateForward('signup');
 	}
+	
+	gotoForgot() {
+		this.navCntrl.navigateForward('forgot-password');
+	}
 
 	gotoHome() {
 		this.navCntrl.navigateForward('/tabs/home');

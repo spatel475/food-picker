@@ -67,4 +67,34 @@ export class ToastService {
 		});
 		await toast.present();
 	}
+	
+	async checkEmail() {
+		let toast = await this.toastr.create({
+			message: 'Please check email to reset password',
+			color: 'success',
+			position: 'bottom',
+			duration: 10000,
+			icon: 'alert-circle',
+			buttons: [{
+				icon: 'close',
+				role: 'cancel',
+			}]
+		});
+		await toast.present();
+	}
+
+	async emailNotSent() {
+		let toast = await this.toastr.create({
+			message: 'Email could not be sent. Ensure correct email is used.',
+			color: 'danger',
+			position: 'bottom',
+			duration: 10000,
+			icon: 'alert-circle',
+			buttons: [{
+				icon: 'close',
+				role: 'cancel',
+			}]
+		});
+		await toast.present();
+	}
 }
