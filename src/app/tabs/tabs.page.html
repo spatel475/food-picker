@@ -1,20 +1,33 @@
 <ion-tabs>
 
-  <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="home" href="/tabs/home">
-      <ion-icon aria-hidden="true" name="triangle"></ion-icon>
-      <ion-label>Home</ion-label>
-    </ion-tab-button>
-<!-- 
-    <ion-tab-button tab="filter" href="/tabs/filter">
-      <ion-icon aria-hidden="true" name="ellipse"></ion-icon>
-      <ion-label>Tab 2</ion-label>
-    </ion-tab-button> -->
+	<!-- <ion-tab-bar slot="bottom">
+		<ion-tab-button tab="home" href="/tabs/home">
+			<ion-icon aria-hidden="true" name="triangle"></ion-icon>
+			<ion-label>Home</ion-label>
+		</ion-tab-button>
 
-    <ion-tab-button tab="favorite" href="/tabs/favorite">
-      <ion-icon aria-hidden="true" name="bookmark"></ion-icon>
-      <ion-label>Favorite</ion-label>
-    </ion-tab-button>
-  </ion-tab-bar>
+		<ion-tab-button tab="favorite" href="/tabs/favorite">
+			<ion-icon aria-hidden="true" name="bookmark"></ion-icon>
+			<ion-label>Favorite</ion-label>
+		</ion-tab-button>
+	</ion-tab-bar> -->
 
 </ion-tabs>
+
+<ion-fab slot="fixed" vertical="bottom" horizontal="end">
+	<ion-fab-button>
+		<ion-icon name="chevron-up-circle"></ion-icon>
+	</ion-fab-button>
+
+	<ion-fab-list side="top" class="custom-shadow">
+		<ion-fab-button (click)="toggleHome()">
+			<ion-icon name="bookmarks-outline"></ion-icon>
+		</ion-fab-button>
+		<ion-fab-button href="/tabs/filter">
+			<ion-icon name="filter-outline"></ion-icon>
+		</ion-fab-button>
+		<ion-fab-button color="danger" (click)="logout()">
+			<ion-icon name="log-out-outline"></ion-icon>
+		</ion-fab-button>
+	</ion-fab-list>
+</ion-fab>

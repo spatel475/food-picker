@@ -1,37 +1,68 @@
 ion-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
 	--background: none;
-	background: linear-gradient(135deg, #bcf8e4 0%, #368062 100%);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100%;
+	background: #ffeaef;
 }
 
-.glassmorphic-container {
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 600px;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.logo-row {
+	height: 150px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+ion-icon {
+	width: 100px; /* Adjust as needed */
+	height: 100px; /* Adjust as needed */
+}
+
+.text-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px; /* Adjust as needed */
+	margin-bottom: 2rem;
+}
+
+.text1 {
+	font-size: 36px;
+}
+
+.text2 {
+	font-size: 16px;
+}
+
+.input-container {
+	display: flex;
+	flex-direction: column;
 	width: 100%;
-	height: 100%;
+	gap: 10px; /* Adjust as needed */
 }
 
-.login-card {
-	background: rgba(255, 255, 255, 0.1);
-	border-radius: 15px;
-	padding: 20px;
-	backdrop-filter: blur(10px);
-	border: 1px solid rgba(255, 255, 255, 0.5);
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-	width: 80%;
-	max-width: 400px;
-	text-align: center;
+.rowStyle {
+	border-radius: 2rem;
+}
 
-	h2 {
-		margin-bottom: 20px;
-	}
+.inputField {
+	border: 3px lightgrey solid;
+}
 
-	ion-item {
-		background: transparent;
-		margin-bottom: 20px;
-	}
+.login-button {
+	margin-top: 1rem;
+}
+
+.signup-button {
+	margin-top: 1rem;
 }

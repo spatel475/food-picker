@@ -1,7 +1,7 @@
 import { IonicModule } from '@ionic/angular';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule, } from '@angular/forms';
 import { FilterPage } from './filter.page';
 
 import { FilterRoutingModule } from './filter-routing.module';
@@ -10,7 +10,7 @@ import { FilterRoutingModule } from './filter-routing.module';
 	imports: [
 		IonicModule,
 		CommonModule,
-		FormsModule,
+		FormsModule, ReactiveFormsModule,
 		FilterRoutingModule
 	],
 	declarations: [FilterPage]

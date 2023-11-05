@@ -1,73 +1,69 @@
+<ion-header>
+	<ion-toolbar>
+		<div class="container" style="display: flex; align-items: center;">
+			<ion-item lines="none" style="flex: 1 1 auto; margin: 10px;">
+				<ion-input placeholder="Oxford, MS" [(ngModel)]="addressInputValue">
+				</ion-input>
+			</ion-item>
+
+			<ion-button (click)="search()" [disabled]="!addressInputValue">
+				<ion-icon name="search"></ion-icon>
+			</ion-button>
+
+			<ion-button (click)="locateMe()">
+				<ion-icon name="location-outline"></ion-icon>
+			</ion-button>
+		</div>
+	</ion-toolbar>
+</ion-header>
+
+
 <ion-content [fullscreen]="true">
 	<div class="container">
-		<!-- <img *ngIf="places.length < 1" src="../../assets/images/food.jpg"> -->
-
 		<ion-card *ngFor="let place of places">
-			<ion-grid>
-				<ion-row>
-					<ion-col size="3">
-						<div class="square-image" style="background-color: #333;">
-							<img class="icon-img" [src]="place.categories[0].icon.prefix + '32' + place.categories[0].icon.suffix"
-								alt="{{ place.categories[0].name }}" />
-						</div>
-					</ion-col>
-					<ion-col size="6">
-						<ion-card-header>
-							<div class="big-font">{{place.name}}</div>
-						</ion-card-header>
-						<ion-card-content>
-							<p>{{place.location.formatted_address}}</p>
-							<p>{{place.categories[0].name}}</p>
-						</ion-card-content>
-					</ion-col>
-					<ion-col size="3" class="ion-text-right">
-						<ion-button color="danger">
-							<ion-icon name="heart" *ngIf="true; else notFavoritedIcon"></ion-icon>
-							<ng-template #notFavoritedIcon>
-								<ion-icon name="heart-outline"></ion-icon>
-							</ng-template>
-						</ion-button>
-					</ion-col>
-				</ion-row>
-			</ion-grid>
+			<ion-list-header style="display: flex; justify-content: space-between; width: 100%;">
+				<h3 style="margin-right: auto;">
+					{{place.name}}
+				</h3>
+				<ion-button *ngIf="place.isFavorite; else notFavoritedIcon" color="danger" fill="solid" shape="round"
+					(click)="place.isFavorite = !place.isFavorite; updateFavorites();">
+					<ion-icon name="heart"></ion-icon>
+				</ion-button>
+				<ng-template #notFavoritedIcon>
+					<ion-button color="danger" fill="outline" shape="round"
+						(click)="place.isFavorite = !place.isFavorite; updateFavorites();">
+						<ion-icon name="heart-outline"></ion-icon>
+					</ion-button>
+				</ng-template>
+			</ion-list-header>
+			<ion-item>
+				<ion-thumbnail slot="start">
+					<img src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+				</ion-thumbnail>
+				<ion-label>
+					<p>{{place.location.formatted_address}}</p>
+					<p>{{place.categories[0].name}}</p>
+				</ion-label>
+			</ion-item>
+		</ion-card>
+
+		<ion-card *ngIf="!loaded && searched">
+			<ion-list-header>
+				<ion-skeleton-text [animated]="true" style="width: 80px"></ion-skeleton-text>
+			</ion-list-header>
+			<ion-item>
+				<ion-thumbnail slot="start">
+					<ion-skeleton-text [animated]="true"></ion-skeleton-text>
+				</ion-thumbnail>
+				<ion-label>
+					<p>
+						<ion-skeleton-text [animated]="true" style="width: 60%;"></ion-skeleton-text>
+					</p>
+					<p>
+						<ion-skeleton-text [animated]="true" style="width: 30%;"></ion-skeleton-text>
+					</p>
+				</ion-label>
+			</ion-item>
 		</ion-card>
 	</div>
 </ion-content>
-
-<ion-header>
-	<ion-toolbar>
-		<div class="container">
-			<ion-grid>
-				<ion-row>
-					<ion-col size="12" class="input-col">
-						<h3 style="color: #333;">Don't know what to eat? Let me help!</h3>
-						<ion-item lines="none">
-							<ion-label position="floating" class="custom-floated-label">Location</ion-label>
-							<ion-input style="margin-left: 0.75rem;" placeholder="Oxford, MS" [(ngModel)]="addressInputValue"></ion-input>
-						</ion-item>
-					</ion-col>
-				</ion-row>
-				<ion-row>
-					<ion-col>
-						<ion-button expand="block" fill="outline" color="primary" (click)="search()"
-							[disabled]="!addressInputValue">
-							<ion-icon slot="start" name="search"></ion-icon>
-							Search
-						</ion-button>
-					</ion-col>
-					<ion-col>
-						<ion-button expand="block" fill="outline" color="medium" (click)="locateMe()">
-							<ion-icon slot="icon-only" name="location-outline"></ion-icon>
-						</ion-button>
-					</ion-col>
-					<ion-col>
-						<ion-button expand="block" fill="outline" color="medium" [routerLink]="'/tabs/filter'">
-							<ion-icon slot="icon-only" name="filter-outline"></ion-icon>
-						</ion-button>
-					</ion-col>
-				</ion-row>
-			</ion-grid>
-		</div>
-
-	</ion-toolbar>
-</ion-header>

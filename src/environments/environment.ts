@@ -8,9 +8,16 @@ export const environment = {
 	clientSecret: 'secret',
 	apiUrl: 'secret',
 	apiKey: 'secret',
-
+	firebaseConfig: {
+		apiKey: "secret",
+		authDomain: "xyz.firebaseapp.com",
+		databaseURL: "https://xyz-default-rtdb.firebaseio.com",
+		projectId: "xyz",
+		storageBucket: "xyz.appspot.com",
+		messagingSenderId: "secret",
+		appId: "secret"
+	}
 };
-
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.

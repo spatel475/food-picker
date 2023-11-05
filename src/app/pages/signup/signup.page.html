@@ -1,27 +1,42 @@
-<ion-content [fullscreen]="true" class="ion-padding">
-	<div class="glassmorphic-container">
-		<div class="login-card">
-			<h2>Food Picker</h2>
-			<form>
-				<ion-item>
-					<ion-label position="floating">Email</ion-label>
-					<ion-input type="email"></ion-input>
+<ion-content>
+	<div class="container">
+		<ion-row class="logo-row">
+			<ion-col>
+				<ion-icon name="fast-food-outline"></ion-icon>
+			</ion-col>
+		</ion-row>
+		<div class="text-container">
+			<ion-label class="text1">Food Picker</ion-label>
+			<ion-label class="text2">Feeling hungry?</ion-label>
+			<ion-label class="text2">Let's roll the dice on dinner!</ion-label>
+		</div>
+
+		<form [formGroup]="credentials" (submit)="signup()">
+			<div class="input-container">
+				<ion-item class="rowStyle inputField" lines="none">
+					<ion-input type="text" label="Email" labelPlacement="floating" required formControlName="email">
+					</ion-input>
+					<ion-note slot="error" *ngIf="(email.dirty || email.touched) && email.errors">
+						Email is invalid
+					</ion-note>
 				</ion-item>
-				<ion-item>
-					<ion-label position="floating">Password</ion-label>
-					<ion-input type="password"></ion-input>
+				<ion-item class="rowStyle inputField ion-margin-bottom" lines="none">
+					<ion-input type="password" label="Password" labelPlacement="floating" required
+						formControlName="password">
+					</ion-input>
+					<ion-note slot="error" *ngIf="(password.dirty || password.touched) && password.errors">
+						Password needs to be 6 characters
+					</ion-note>
 				</ion-item>
-				<ion-button expand="block" class="ion-margin-top" [routerLink]="'/tabs/login'">
+				<ion-button expand="block" shape="round" class="rowStyle login-button" color="tertiary"
+					[disabled]="!credentials.valid" type>
 					Signup
 				</ion-button>
-			</form>
-
-			<div style="padding-top: 1rem;">
-				<a style="color: black;" [routerLink]="'/login'">
-					Already have an account?
-					<u>Login</u>
-				</a>
+				<ion-button fill="outline" shape="round" class="rowStyle sign-up-button" color="medium"
+					(click)="gotoLogin()">
+					Already have an account? Login
+				</ion-button>
 			</div>
-		</div>
+		</form>
 	</div>
 </ion-content>

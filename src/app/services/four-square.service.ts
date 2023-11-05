@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, delay } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -31,7 +31,7 @@ export class FourSquareService {
 		// 	}
 		// });
 
-		return this.http.get<PlaceResponse>('http://localhost:8100/assets/data/places.json')
+		return this.http.get<PlaceResponse>('../assets/data/places.json').pipe(delay(500));
 	}
 }
 
@@ -51,6 +51,7 @@ export interface Place {
 	name: string
 	related_places: RelatedPlaces
 	timezone: string
+	isFavorite: boolean
 }
 
 export interface Category {

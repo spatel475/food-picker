@@ -1,13 +1,58 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>favorite</ion-title>
-  </ion-toolbar>
+<ion-header>
+	<ion-toolbar>
+		
+		<h1>
+			Favorites!
+		</h1>
+	</ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">favorite</ion-title>
-    </ion-toolbar>
-  </ion-header>
+	<div class="container">
+		<ion-card *ngFor="let place of places">
+			<ion-list-header style="display: flex; justify-content: space-between; width: 100%;">
+				<h3 style="margin-right: auto;">
+					{{place.name}}
+				</h3>
+				<ion-button *ngIf="place.isFavorite; else notFavoritedIcon" color="danger" fill="solid" shape="round"
+					(click)="place.isFavorite = !place.isFavorite; this.updateFavorites();">
+					<ion-icon name="heart"></ion-icon>
+				</ion-button>
+				<ng-template #notFavoritedIcon>
+					<ion-button color="danger" fill="outline" shape="round"
+						(click)="place.isFavorite = !place.isFavorite; this.updateFavorites();">
+						<ion-icon name="heart-outline"></ion-icon>
+					</ion-button>
+				</ng-template>
+			</ion-list-header>
+			<ion-item>
+				<ion-thumbnail slot="start">
+					<img src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+				</ion-thumbnail>
+				<ion-label>
+					<p>{{place.location.formatted_address}}</p>
+					<p>{{place.categories[0].name}}</p>
+				</ion-label>
+			</ion-item>
+		</ion-card>
+
+		<ion-card *ngIf="!loaded && searched">
+			<ion-list-header>
+				<ion-skeleton-text [animated]="true" style="width: 80px"></ion-skeleton-text>
+			</ion-list-header>
+			<ion-item>
+				<ion-thumbnail slot="start">
+					<ion-skeleton-text [animated]="true"></ion-skeleton-text>
+				</ion-thumbnail>
+				<ion-label>
+					<p>
+						<ion-skeleton-text [animated]="true" style="width: 60%;"></ion-skeleton-text>
+					</p>
+					<p>
+						<ion-skeleton-text [animated]="true" style="width: 30%;"></ion-skeleton-text>
+					</p>
+				</ion-label>
+			</ion-item>
+		</ion-card>
+	</div>
 </ion-content>
