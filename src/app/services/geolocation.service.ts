@@ -13,8 +13,8 @@ export class GeolocationService {
 		try {
 			let coords = await Geolocation.getCurrentPosition();
 			let coordinates: Coordinates = {
-				latitude: coords.coords.latitude,
-				longitude: coords.coords.longitude
+				latitude: coords.coords.latitude.toFixed(2),
+				longitude: coords.coords.longitude.toFixed(2)
 			}
 			return coordinates;
 		} catch (error) {
@@ -24,6 +24,6 @@ export class GeolocationService {
 }
 
 export interface Coordinates {
-	latitude: number;
-	longitude: number;
+	latitude: string;
+	longitude: string;
 }

@@ -11,7 +11,7 @@ import { DatabaseService } from 'src/app/services/database.service';
 })
 
 export class HomePage {
-	coordinates: Coordinates | null = null;
+	coordinates: Coordinates;
 	addressInputValue: string = '';
 	places: Place[] = [];
 
@@ -45,7 +45,9 @@ export class HomePage {
 	async locateMe() {
 		let coordinates = await this.geolocation.locateMe();
 		if (coordinates) {
-			this.addressInputValue = `Lat: ${coordinates.latitude.toPrecision(4)}, Long: ${coordinates.longitude.toPrecision(4)}`
+			this.coordinates = coordinates;
+			this.addressInputValue = `Lat: ${coordinates.latitude}, Long: ${coordinates.longitude}`
+			this.callApi(this.coordinates?.latitude, this.coordinates?.longitude);
 		}
 		else {
 			this.toastr.unsuccessfulLocateMeToast();
@@ -56,7 +58,7 @@ export class HomePage {
 		if (this.isCityStateValid()) {
 			this.loaded = false;
 			this.searched = true;
-			this.callApi(this.coordinates?.latitude, this.coordinates?.longitude)
+			this.callApi(this.coordinates?.latitude, this.coordinates?.longitude);
 		}
 		else {
 			this.toastr.invalidLocationFormatToast();
@@ -65,14 +67,14 @@ export class HomePage {
 
 	}
 
-	callApi(latitude: number | undefined, longitude: number | undefined) {
+	callApi(latitude: string, longitude: string) {
 		this.fourSquare.getNearbyPlaces(latitude, longitude)
 			.subscribe({
 				next: response => {
 					// Update places with the received data
 					this.places = response.results;
 					this.setFavorites();
-					console.info(response);
+					console.log(response);
 					this.loaded = true;
 				},
 				error: err => {
@@ -91,5 +93,9 @@ export class HomePage {
 	updateFavorites() {
 		let items = this.places.filter(f => f.isFavorite)
 		this.db.updateFavorites(items)
+	}
+
+	openMaps(address:string){
+		window.open(`http://maps.google.com/?q=${address}`);
 	}
 }

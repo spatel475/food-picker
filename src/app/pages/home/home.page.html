@@ -41,7 +41,7 @@
 					<img src="https://ionicframework.com/docs/img/demos/avatar.svg" />
 				</ion-thumbnail>
 				<ion-label>
-					<p>{{place.location.formatted_address}}</p>
+					<a (click)="openMaps(place.location.formatted_address)">{{place.location.formatted_address}}</a>
 					<p>{{place.categories[0].name}}</p>
 				</ion-label>
 			</ion-item>

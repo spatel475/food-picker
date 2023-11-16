@@ -7,28 +7,32 @@ import { environment } from 'src/environments/environment';
 	providedIn: 'root'
 })
 export class FourSquareService {
-	private clientId = environment.clientId; // Update this line
-	private clientSecret = environment.clientSecret; // And this line
-	private apiKey = environment.apiKey; // And this line
+	private apiKey = environment.apiKey;
 	private apiUrl = 'https://api.foursquare.com/v3/places/search';
 
 	constructor(private http: HttpClient) { }
 
-	getNearbyPlaces(lat: number | undefined, long: number | undefined): Observable<PlaceResponse> {
+	getNearbyPlaces(lat: string, long: string): Observable<PlaceResponse> {
+		console.log('====================================');
+		console.log(lat,long);
+		console.log('====================================');
 		const searchParams = new URLSearchParams({
-			query: 'coffee',
-			ll: '41.8781,-87.6298',
+			// query: 'res',
+			ll: `${lat},${long}`,
+			// near: 'Oxford,MS',
 			open_now: 'true',
-			sort: 'DISTANCE'
+			sort: 'DISTANCE',
+			limit: '50',
+			categories: '13000'
+			// v: '20170901'
 		});
 
-		const url = `${this.apiUrl}?client_id=${this.clientId}&client_secret=${this.clientSecret}&v=20231001&ll=${lat},${long}`;
+		// const url = `${this.apiUrl}?${searchParams}`;
 		// return this.http.get<PlaceResponse>(url, {
-		// 	// method: 'GET',
 		// 	headers: {
 		// 		Accept: 'application/json',
 		// 		Authorization: this.apiKey,
-		// 	}
+		// 	},
 		// });
 
 		return this.http.get<PlaceResponse>('../assets/data/places.json').pipe(delay(500));
