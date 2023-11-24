@@ -2,7 +2,9 @@ export const environment = {
 	production: false,
 	clientId: 'secret',
 	clientSecret: 'secret',
-	apiUrl: 'secret',
+	apiUrl: 'https://api.foursquare.com/v3/places/search',
+	fakeDataUrl: '../assets/data/places.json',
+	useApi: false,
 	apiKey: 'secret',
 	firebaseConfig: {
 		apiKey: "secret",

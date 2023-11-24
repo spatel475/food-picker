@@ -16,10 +16,20 @@ export class TabsPage {
 		this.router.navigateByUrl('/login', { replaceUrl: true });
 	}
 
+	goToFilter() {
+		this.router.navigateByUrl('/tabs/filter');
+	}
+
 	toggleHome() {
 		if (!this.router.url.includes('home'))
 			this.router.navigateByUrl('/tabs/home')
 		else
 			this.router.navigateByUrl('/tabs/favorite')
+	}
+
+	getFilterIconName() {
+		if (!this.router.url.includes('home'))
+			return 'home-outline'
+		return 'bookmarks-outline'
 	}
 }
