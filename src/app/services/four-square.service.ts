@@ -1,41 +1,43 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, delay } from 'rxjs';
+import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { FilterOptions } from './filter.service';
 
 @Injectable({
 	providedIn: 'root'
 })
 export class FourSquareService {
 	private apiKey = environment.apiKey;
-	private apiUrl = 'https://api.foursquare.com/v3/places/search';
+	private apiUrl = environment.useApi ? environment.apiUrl : environment.fakeDataUrl;
 
 	constructor(private http: HttpClient) { }
 
-	getNearbyPlaces(lat: string, long: string): Observable<PlaceResponse> {
-		console.log('====================================');
-		console.log(lat,long);
-		console.log('====================================');
+	getNearbyPlaces(lat: string, long: string, selectedFilter: FilterOptions): Observable<PlaceResponse> {
 		const searchParams = new URLSearchParams({
-			// query: 'res',
 			ll: `${lat},${long}`,
 			// near: 'Oxford,MS',
-			open_now: 'true',
-			sort: 'DISTANCE',
+			open_now: `${selectedFilter.openNow}`,
+			sort: `${selectedFilter.sortBy}`,
+			min_price: `${selectedFilter.priceRange.lower}`, // for now only allow selection of 1 price instead of range
+			max_price: `${selectedFilter.priceRange.upper}`,
 			limit: '50',
 			categories: '13000'
 			// v: '20170901'
 		});
 
-		// const url = `${this.apiUrl}?${searchParams}`;
-		// return this.http.get<PlaceResponse>(url, {
-		// 	headers: {
-		// 		Accept: 'application/json',
-		// 		Authorization: this.apiKey,
-		// 	},
-		// });
+		const url = `${this.apiUrl}?${searchParams}`;
 
-		return this.http.get<PlaceResponse>('../assets/data/places.json').pipe(delay(500));
+		console.log('====================================');
+		console.log(url)
+		console.log('====================================');
+
+		return this.http.get<PlaceResponse>(url, {
+			headers: {
+				Accept: 'application/json',
+				Authorization: this.apiKey,
+			},
+		});
 	}
 }
 

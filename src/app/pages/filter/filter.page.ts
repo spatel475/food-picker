@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { ModalController } from '@ionic/angular';
-// import { FilterModalComponent } from '../../filter-modal/filter-modal.component';
+import { Router } from '@angular/router';
+import { FilterOptions, FilterService, defaultFilter } from 'src/app/services/filter.service';
 
 @Component({
 	selector: 'app-filter',
@@ -8,9 +8,24 @@ import { ModalController } from '@ionic/angular';
 	styleUrls: ['filter.page.scss']
 })
 export class FilterPage {
-	parameters: any = {}
+	parameters: FilterOptions = defaultFilter();
 
-	constructor() { }
+	constructor(private filter: FilterService, private router: Router) { }
 
+	updateFilter() {
+		console.log(this.parameters)
+		this.filter.updateFilters(this.parameters);
+	}
 
+	goToHome() {
+		this.router.navigateByUrl('/tabs/home');
+	}
+
+	resetFilter() {
+		this.parameters = defaultFilter();
+	}
+
+	isFilterChanged() {
+		return JSON.stringify(this.parameters) === JSON.stringify(defaultFilter());
+	}
 }

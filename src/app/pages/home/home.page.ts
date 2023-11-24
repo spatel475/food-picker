@@ -3,6 +3,7 @@ import { FourSquareService, Place } from '../../services/four-square.service';
 import { Coordinates, GeolocationService } from 'src/app/services/geolocation.service';
 import { ToastService } from 'src/app/services/toast.service';
 import { DatabaseService } from 'src/app/services/database.service';
+import { FilterOptions, FilterService, defaultFilter } from 'src/app/services/filter.service';
 
 @Component({
 	selector: 'app-home',
@@ -14,6 +15,7 @@ export class HomePage {
 	coordinates: Coordinates;
 	addressInputValue: string = '';
 	places: Place[] = [];
+	selectedFilter: FilterOptions = defaultFilter();
 
 	loaded = false;
 	searched = false;
@@ -22,11 +24,20 @@ export class HomePage {
 		private fourSquare: FourSquareService,
 		private geolocation: GeolocationService,
 		private toastr: ToastService,
-		private db: DatabaseService
+		private db: DatabaseService,
+		private filter: FilterService
 	) {
+		this.filter.selectedFilter$.subscribe({
+			next: (filter) => {
+				console.warn('Existing filter', JSON.stringify(this.selectedFilter))
+				console.warn('New filter', JSON.stringify(filter))
+				this.selectedFilter = filter;
+			},
+			error: (err) => console.warn(err)
+		})
 	}
 
-	setFavorites() {
+	private setFavorites() {
 		this.db.getUserFavorite()?.subscribe({
 			next: (favs: Place[]) => {
 				if (this.places.length > 0) {
@@ -67,8 +78,8 @@ export class HomePage {
 
 	}
 
-	callApi(latitude: string, longitude: string) {
-		this.fourSquare.getNearbyPlaces(latitude, longitude)
+	private callApi(latitude: string, longitude: string) {
+		this.fourSquare.getNearbyPlaces(latitude, longitude, this.selectedFilter)
 			.subscribe({
 				next: response => {
 					// Update places with the received data
@@ -84,7 +95,7 @@ export class HomePage {
 			});
 	}
 
-	isCityStateValid() {
+	private isCityStateValid() {
 		const cityStatePattern = /^[a-zA-Z\u0080-\u024F]+(?:[\s-][a-zA-Z\u0080-\u024F]+)*,\s*[a-zA-Z]{2}$/
 		// return cityStatePattern.test(this.addressInputValue);
 		return true;
@@ -95,7 +106,7 @@ export class HomePage {
 		this.db.updateFavorites(items)
 	}
 
-	openMaps(address:string){
+	openMaps(address: string) {
 		window.open(`http://maps.google.com/?q=${address}`);
 	}
 }

@@ -1,18 +1,39 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
-  </ion-toolbar>
+<ion-header>
+	<ion-toolbar>
+		<ion-title>Filter Results</ion-title>
+	</ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+	<ion-item>
+		<ion-select value="DISTANCE" label="Sort By" [(ngModel)]="parameters.sortBy" (ngModelChange)="updateFilter()">
+			<ion-select-option value="DISTANCE">Distance</ion-select-option>
+			<ion-select-option value="RATING">Rating</ion-select-option>
+			<ion-select-option value="POPULARITY">Popularity</ion-select-option>
+		</ion-select>
+	</ion-item>
 
+	<ion-item>
+		<ion-toggle [(ngModel)]="parameters.openNow" (ngModelChange)="updateFilter()">Open Now</ion-toggle>
+	</ion-item>
 
-  <ion-button >Search Filter Open</ion-button>
+	<ion-item style="font-weight: 700;" lines="none">
+		Price
+	</ion-item>
+	<ion-item>
+		$
+
+		<ion-range [ticks]="true" [snaps]="true" [min]="1" [max]="4" [dualKnobs]="true"
+			[(ngModel)]="parameters.priceRange" (ngModelChange)="updateFilter()">
+		</ion-range>
+
+		$$$$
+
+	</ion-item>
+	<ion-item lines="none"></ion-item>
+
+	<div style="width: 100%; display: flex; justify-content: center;">
+		<ion-button fill="outline" [disabled]="isFilterChanged()" (click)="resetFilter()">Reset</ion-button>
+		<ion-button (click)="goToHome()">Done</ion-button>
+	</div>
 </ion-content>
